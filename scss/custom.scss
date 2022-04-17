@@ -1,0 +1,17 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+$body-color: rgb(65, 1, 89);
+
+body {
+    color: $body-color;
+}
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
