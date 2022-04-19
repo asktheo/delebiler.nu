@@ -1,17 +1,72 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-
-.fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+@import "bootstrap";
 
 $body-color: rgb(65, 1, 89);
+$body-background-color: rgb(255, 255, 255);
 
 body {
     color: $body-color;
+    background-color: $body-background-color;
 }
 
-.fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+address {
+  padding-right: 1.5rem;
+  color: $light;
+}
+
+article {
+  margin-top: 1rem;
+}
+
+dl {
+  text-align: left;
+}
+
+dd {
+  margin-left: 1.5rem;
+}
+
+#topbar {
+  margin-bottom: 0;
+}
+
+#topnav {
+  padding-left: 2rem;
+}
+
+#presentation {
+  margin-top: 15px;
+  background-color: $body-background-color;
+  border-bottom: 1px solid $body-color;
+}
+
+article > section{
+  padding-left: 1.5rem;
+}
+
+#content {
+  margin-top: 15px;
+}
+
+// Base class
+.callout {
+  border-left: 0.2rem solid;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+}
+
+// Modifier classes
+.callout-info {
+  border-left-color: $info;
+}
+.callout-warning {
+  border-left-color: $warning;
+}
+
+.callout-danger {
+  border-left-color: $danger;
+}
+
+// #hoejremenu {
+//   position: fixed;
+//   top:50px;
+// }
