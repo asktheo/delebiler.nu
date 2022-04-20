@@ -5,17 +5,65 @@
   <title>Øresund Delebiler</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
+<style>
+  body {
+    color: rgb(65, 1, 89);
+    background-color: rgb(255, 255, 255);
+  }
 
-<body>
+  article {
+    margin-top: 1rem;
+  }
 
-  <div class="jumbotron text-center" id="topbar">
-    <h1>Øresund Delebiler</h1>
-    <p>Flere valgmuligheder. Større rækkevidde. Mindre CO<sub>2</sub></p>
-  </div>
+  dl {
+    text-align: left;
+  }
+
+  dd {
+    margin-left: 1.5rem;
+  }
+
+  #topbar {
+    margin-bottom: 0;
+  }
+
+  #topnav {
+    padding-left: 2rem;
+  }
+
+  #presentation {
+    background-color: #e8e8e8;
+  }
+
+  article>section {
+    padding-left: 1.5rem;
+  }
+
+  #content {
+    border-bottom: 2px solid rgb(65, 1, 89);
+  }
+
+  /* Base class */
+  .callout {
+    border-left: 0.2rem solid;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  /* Modifier classes */
+  .callout-info {
+    border-left-color: #17a2b8;
+    /* bs-info */
+  }
+</style>
+
+<body lang="da">
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="topnav">
-    <a class="navbar-brand" href="/">Hjem</a>
+    <a class="navbar-brand" href="/">Øresund Delebiler</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,6 +82,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#faq">Spørgsmål og svar</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#baggrund">Baggrund</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#links">Links</a>
+        </li>
         <!--       <li class="nav-item">
         <a class="nav-link" href="/venteliste">Venteliste</a>
       </li>  -->
@@ -42,73 +96,76 @@
   </nav>
 
   <div class="container">
+    <!-- using classic grid system -->
     <div class="row" id="presentation">
-      <div class="col-sm-4" id="hoejremenu">
+      <div class="col-md-6">
         <article id="news">
-          <h2>Nyhed!</h2>
           <section id="2022april7">
-            <h5>d. 7. april 2022: Øresund delebiler er stiftet</h5>
-            <p>Måske noget for dig som bor i Humlebæk eller Nivå?</p>
+            <h2>Nyheder</h2>
+            <h5>d. 7. april 2022: Øresund Delebiler er nu stiftet</h5>
+            <p>
+              Er du 25 år eller mere og har haft kørekort i mindst 3 år?
+              Så er Øresund Delebiler måske noget for dig!
+            </p>
             <figure class="figure">
               <img class="figure-img img-fluid rounded"
-                src="https://lh3.googleusercontent.com/Mv4Q2Qn3K_HbL72el3ep2tCnC72fHzbKn8ex6wDHg6D5s2OsGjo5CqlnYign5kLU2CwPWdnYYW3yo2n8GSfqmetIKk21Vm-7XYvPA97AWRMozLInzO1tdH3QxPRLUyclfc0WY02i=w275" />
+                src="https://lh3.googleusercontent.com/Mv4Q2Qn3K_HbL72el3ep2tCnC72fHzbKn8ex6wDHg6D5s2OsGjo5CqlnYign5kLU2CwPWdnYYW3yo2n8GSfqmetIKk21Vm-7XYvPA97AWRMozLInzO1tdH3QxPRLUyclfc0WY02i=w300" />
               <figcaption class="figure-caption caption-sm">Fra venstre: Theo - næstformand og sekretær, Niklaus -
                 Kasserer, Sumesh - Første medlem</figcaption>
             </figure>
           </section>
         </article>
-
+      </div>
+      <div class="col-md-6" id="hoejremenu">
         <article id="betaling">
           <section id="betaling1">
-            <h5>Bliv støttemedlem</h5>
-            <p>Du kan betale støttemedlemsskab på ved brug af MobilePay. Scan qr-koden med app'en eller indtast koden <b>3081RV</b></p>
+            <h2>Bliv støttemedlem</h2>
+            <h5>Synes du bare, det er alle tiders idé?</h5>
+            <p>- men det er ikke aktuelt for dig (lige nu). Så støt foreningen med et årligt bidrag.<br>Du kan betale
+              støttemedlemsskab på ved brug af <b>MobilePay</b>. Scan QR-koden med app'en eller indtast koden
+              <b>3081RV</b>
+            </p>
             <figure class="figure" id="mobilepay">
-              <img class="figure-img" src="data:image/png;base64,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"/>
-              <figcaption>MobilePay</figcaption>
+              <img class="figure-img img-fluid"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvCAIAAAAE8BkiAAABU2lDQ1BpY20AABiVY2BgPJGTnFvMJMDAkJtXUhTk7qQQERmlwP6IgZlBhIGTgY9BNjG5uMA32C2EgYGBoTixvDi5pCiHAQV8u8bACKIv62Yk5qXMnchg69CwwdahRKdx3lKlPgb8gDMltTiZgYHhAwMDQ3xyQVEJAwMjDwMDA095SQGILcHAwCBSFBEZxcDAqANip0PYDiB2EoQdAlYTEuTMwMCYwcDAkJCOxE5CYkPtAgHW0iB3J2SHlKRWlIBoZ2cDBlAYQEQ/h4D9xih2EiGWv4CBweITAwNzP0IsaRoDw/ZOBgaJWwgxlQUMDPytDAzbjiSXFpVBrdFiYGCoYfjBOIeplLmZ5SSbH4cQlwRPEt8XwfMi3ySyZPQUnFXWaGbp1Rm/ttxsf80t3NcspCxGPEU2p600rK63Q2eS2ZzVy3s23d4389Tx66lPyj/+/P8fAEeDZOWRl0f5AAAGpElEQVR4nO2dS3JtNQxFedQdEXShC2OmTZsxPXpnB9C1pC05KarWalHB9jFhl2zrl2+//PTbDxv8+dcf4c9//fn34qxnZPjD1qzi1w/b3lohnV5f8+NSzwBv/Xf8uLgW/N9BDSBezz+lNjOkbkjrhi4cWTk1/juydX6Fs1Kjbdjq+fHkLZt+C9sAAjWAQA0gXuFP68/CdPozuP6YTO8K6VbPl5XWEbt4Mar/3lq/gfNS5z3/C2wDCNQAIj4pblB/TKYvzLr5XXzLec7W1sjhf8scbAMI1AACNYC4cm8IT7hL76v6C7NOa1Y9dur9Bj7huvCAbQCBGkDEJ8UN6+Q59dIBN5JcvHfv4i+t5cEM8WZhG0CgBhCoAYTuDYv5lumxV38BepHP8/TWVoe0grReSlg4wAPbAAI1gHh9iXkM8Qzp0O246CGt/7D1rTO7//uwDSBQAwjUAOLb9+/fD/+6XgbpDZhnlp7ZLVMMqZf3LAY267Q+im0AgRpAoAYQSXVNelbddleku/KSno1z3UuIGt4VbC+LEbLHNsA/QA0gnBhmK/AY2rR6+4QvabSTrjCvkzx/y/NMe10l6N8AMagBBGoAIc/03Al9HhkyP4CHfZ8WHcPDZoYerR5Z6UhsAwjUAOJbvZfsYsFhON1roDrc1Wc+IOvrL7bYfTcgBNsAAjWAQA0g4nvDjStCyKUbgHfDuNRb2Vi/vqtWBXO6JrYBBGoAEWfJLvZVN4onW/61G412QtKan3TNxUKgeiXSu82EYBtAoAYQqAFEHMO80Ve9zjzEd6Pvk7eBVgzzxhs+Xf8j2AYQqAEEagAx7Sx8ow5nscGRl1I8Dyifl/VKYj4yzLPCMw05qAFE/NdR69Uv4ZSwuial3jepbsmHT81dvPIhr06mdUA8YBtAoAYQqAFEXJVbf9d5xSfnUy2NaHue4/rFIr33XGrsW3/31qe3squxDSBQAwgnhtmi/i5NqWd+LlakGCM/IUZaX6qVfIVtAIEaQKAGEK/6EXujjGS+VP2xmg6o35aGd5Q00XkxCao1C9sAAjWAaPgijZHpCq3pXjTPGOAdBIvRyPl0L00X2wACNYBADSCS/g3zuJzxlmv5fYcd/DwWC3xTbm+bGCbEoAYQqAGE0/dpnuZUfw0v9n1KV6h/dLgr77uLxdDkPkEOagDxCg2RcShcKlPxkmDrLCbcersauvlb09N4LLYBBGoAgRpAvIaOz8WLRf0pVX/gLTZdSFlsnFW/DezelrANIFADCKfTz2JgM1x2bv0WB6ce0sWazMXkroeWtxfbAAI1gEANIGLP9MNiwtJtWgekEVn1NtPy959nnaesXDuwDSBQA4iGL3LY6Sdd00tR8bx+xgvty1+V4a68AbwwIQc1gEANIF71I9CL5tUZPvDmz8Jwuhek/ZLIsHebIYYJMagBBGoAoeqa4bVgMWfacxJ4nul5blJ95I0E9N2AALYBBGoAEccwjVYKqXmfG1JjA4utIFr+8uFSt9OAiWFCDmoAgRpAxP0bQuqnmvdsC5lfLMKlzmsubnUxDt66IngXF2wDCNQAIolh1q3TO+NjNPV5F5czOiUsGmrvhdn61u085NTXiW0AgRpAoAYQ8d+8e7jd92nxAZmuHzJP/bqd++Stf/5l8sKEHNQAIq6uGcYw0wHzfM7z9GfkPOF2SOvde2OHrTML2wACNYBADSDU98mLgC0W0oRrfmbJyvlDl7pR1Z3Q88hw+tvGNoBADSBQA4jG38pdzH72osBG8pWXLxTi/QdeSgpPd3j+6LtdYRtAoAYQcQzTiIAtZsm2CnXqnvV5Hldx/yuFLsb0uo/g3QrYBhCoAQRqAJHkPn3ES6cpTrePuvP6l9onLLaCSDcwvIK0Ll7YBhCoAUTSWdgz2ouklnaxuKU+0nv3piO/qsHPA7YBBGoAgRpA6IW5yKJf9tJTynCNz4/qxUvYpaWwDSBQA4jp39F+eGe7DEvbqng84yWpeh/1slFSjNTZ+pr4IuEtqAEEagARV9fU8QpRhnE/7woyrJlp9X0aXkHqtJZKB2MbQKAGEKgBxCv86e0wd339eUqVsQFv/cXOV4uuC6prwAQ1gIhPihvMW0EYr81h6eM7LqUeLS5bf+LimYYY1AACNYC4cm8Ij6VhPPcj9dyneUZy3fGc7jBl0WMdXhHwTEMD1AAiPikWTZax5rDr4LuPXio0Pc9arA71oLMwmKAGEKgBRNwh8Db1StaQeYOH2xs472qekeU9vM+7wjbAP0ANIFADiL8B6HA9mibnfJsAAAAASUVORK5CYII=" />
+              <!-- <figcaption>MobilePay 3081RV</figcaption> -->
             </figure>
-          </section>
-        </article>
-
-        <!--links-->
-        <article id="links">
-          <h3>Links til andre sider</h3>
-          <section>
-            <ul class="nav nav-pills flex-column">
-              <!-- <li class="nav-item">
-              <a class="nav-link active" href="#">Active</a>
-            </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="">Vedtægter</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.nsjd.dk" target="_blank">Nordsjællands Delebiler</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Booking af bil (ikke muligt endnu)</a>
-              </li>
-            </ul>
+            <p>Psst! Send os en <a href="mailto:info@delebiler.nu">mail</a> og skriv, der, hvis du vil på venteliste eller bare have besked, når vi anskaffer
+              en bil.</p>
           </section>
         </article>
       </div>
-      <div class="col-sm-8">
+    </div>
+    <div class="row" id="content">
+      <div class="col-md-2" style="background-color:#cbcbcb"></div>
+      <div class="col-md-8">
         <!-- indmeldelse -->
         <article id="indmeldelse">
           <section id="indmeldelse0">
             <h2>Meld dig ind i Øresund Delebiler</h2>
-            <p>Før vi anskaffer den første bil skal vi være minimum 10 medlemmer. Vi vil gerne i gang, derfor:</p>
-            <div class="callout callout-info">
-              <h5>Få 50% rabat på indmeldelse frem til d. 1. oktober 2022!</h5>
+            <h5>Flere valgmuligheder. Større rækkevidde. Mindre CO<sub>2</sub></h5>
+            <p> Bilerne leaser vi af en autoriseret bilforhandler og -værksted. Foreningen lejer så bilen videre til
+              medlemmerne for en takst afhængig af leasing- og driftsomkostninger. Før vi anskaffer den første bil skal
+              vi være minimum 10 medlemmer. Derfor:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="callout callout-info" style="height:50%">
+                  <h2 style="text-align: center">Indtil d. 1. oktober 2022 får du 50% rabat på indmeldelse!</h2>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <figure class="figure">
+                  <img class="figure-img img-fluid rounded"
+                    src="https://lh3.googleusercontent.com/Ps7q8Oyv31sglXmFuxal8L50FFhTHCmBRHB8bTvlwESSG2uudUevGM_Gu3dydDU8LY4TLn0ssodkkL9P0IqwK8SMDIZE0JRNILm-Z7xqcNOMgOqOLuLxl_MZmn267VPuWJQHc48g=w800" />
+                  <figcaption class="figure-caption caption-sm">Den første bil kan blive en som denne, den nye rummelige,
+                    praktiske og økonomiske Citroën
+                    ë-Berlingo med plads til meget af det, du kan købe i IKEA og Plantorama.</figcaption>
+                </figure>
+              </div>
             </div>
-            <figure class="figure">
-              <img class="figure-img img-fluid rounded"
-                src="https://lh3.googleusercontent.com/Ps7q8Oyv31sglXmFuxal8L50FFhTHCmBRHB8bTvlwESSG2uudUevGM_Gu3dydDU8LY4TLn0ssodkkL9P0IqwK8SMDIZE0JRNILm-Z7xqcNOMgOqOLuLxl_MZmn267VPuWJQHc48g=w800" />
-              <figcaption class="figure-caption caption-sm">Den første bil kan blive en som denne, en rummelig Citroën
-                Berlingo med plads til meget af det, du kan købe i IKEA og Plantorama</figcaption>
-            </figure>
-            <p></p>
           </section>
         </article>
-        
+
         <!-- priser -->
         <article id="priser">
           <section id="priser0">
@@ -148,10 +205,10 @@
               </tfoot>
             </table>
             <section id="priser1">
-              <p>1. Bilerne leaser vi af en autoriseret bilforhandler og -værksted. Foreningen lejer så bilen videre til
-                medlemmet for en takst afhængig af leasing-omkostningerne. Leasing betyder mindre arbejde for dig og
-                bestyrelsen. Det koster dog at have en bil, og det uanset om det er eje, leasing eller leje. Derfor
-                forlanger vi et indmeldelsesgebyr på 2000 kr. Frem til d. 1. oktober, hvor vi regner med at lease den
+              <p>1. Leasing betyder mindre arbejde for os delebilister. Det koster dog at have en bil, og det uanset
+                ejerforholdet. Derfor
+                forlanger vi et indmeldelsesgebyr på 2000 kr. Dog - frem til d. 1. oktober, hvor vi regner med at lease
+                den
                 første bil, kan du blive medlem for kun 1000 kr.</p>
             </section>
             <section id="priser2">
@@ -210,42 +267,47 @@
           </section>
         </article>
         <article id="om">
-          <h2>Om foreningen</h2>
-
           <section id="om1">
-            <h5>Dannet</h5>
-            <p>Stiftende generalforsamling blev afholdt d. 22. marts 2022.</p>
+            <h2>Om foreningen</h2>
+            <h5>Etablering</h5>
+            <p>Peter, Niklaus, Sumesh og Theo stiftede foreningen d. 22. marts 2022.</p>
             <h5>Hvem er vi?</h5>
-            <p>Øresund Delebiler er en helt ny forening, der vil tilbyde biler mod en leje pr. time og km. Vi bor i et
+            <p>Bestyrelsen består af tre og en suppleant. Vi har i gruppen mange års erfaring med udlejning og deling af biler. 
+              Dette stærke felt vil nu tilbyde biler mod en leje pr. time og km.</p>
+          </section>
+
+          <section id="om2">
+            <h5>Hvordan vil det foregå i praksis?</h5>
+            <p>Planen er, at vi d. 1. oktober 2022 er så mange medlemmer, at vi kan begynde at lease biler. Som
+              tommelfingerregel skal vi være 10 personer eller husstande for hver bil, foreningen råder over. </p>
+            <p>Når vi har det første køretøj vil det kunne lejes ved hjælp af bookingsystemet, som ejes og udvikles i
+              fællesskab mellem de første delebil-klubber i Danmark og Sverige</p>
+          </section>
+
+          <!-- baggrund-->
+          <section id="baggrund">
+            <h5>Baggrund</h5>
+            <p>Vi bor i et
               område, hvor mange har en bil, som de ikke bruger så tit. Bilen er for mange den største
-              enkeltinvestering, de foretager sig (For boligejere den næststørste). Hvis man da kan kalde det en
+              enkeltinvestering, de foretager sig. Hvis man da kan kalde det en
               investering, for nye biler falder hurtigt i værdi. Bilen er snarere et dyrt forbrugsgode, og derfor
               anskaffer mange en brugt bil. Der er dog meget vedligeholdelse med en bil, som er fem år eller mere, og
               værkstedsregningerne kommer oftest uventet og ubelejligt. I tider med stigende leveomkostninger er det
               måske værd at se på den store udgift ved at have bil.</p>
-            <p>Samtidig forsøger samfundet at komme i gang med den grønne omstilling. Her er deleøkonomi og især delebiler en
-              nøgleløsning. Ved at dele materielle forbrugsgoder som biler, sparer vi miljøet for en masse forurening fra
+            <p>Samtidigt forsøger samfundet at komme i gang med den grønne omstilling. Her er deleøkonomi og især
+              delebiler en
+              nøgleløsning. Ved at dele materielle forbrugsgoder som biler, sparer vi miljøet for en masse forurening
+              fra
               fremstillingsprocessen. Klimaet blivere sparet for en del CO<sub>2</sub> fra både fremstillingen og
               ved, at vi som medlemmer kan køre rundt i nyere, mindre forurenende biler. Og så er det vores mål, at
               personbilerne, vi anskaffer, skal køre på ren el!</p>
           </section>
-          <section id="om2">
-            <h5>Hvordan vil det foregå i praksis?</h5>
-            Bilerne leaser vi af en autoriseret bilforhandler og -værksted. Foreningen lejer så bilen videre til
-            medlemmet for en takst afhængig af leasing-omkostningerne. Leasing betyder mindre arbejde for dig og
-            bestyrelsen. Det koster dog at have en bil, og det uanset om det er eje, leasing eller leje. Derfor
-            forlanger vi et indmeldelsesgebyr på 2000 kr. Frem til d. 1. oktober, hvor vi regner med at lease den
-            første bil, kan du blive medlem for kun 1000 kr.
-            <p>Planen er, at vi d. 1. oktober 2022 er så mange medlemmer, at vi kan begynde at lease biler. Som
-              tommelfingerregel skal vi være 10 personer eller husstande for hver bil, foreningen råder over. Jo flere,
-              vi bliver desto færre nye medlemmer er nødvendige for at lease den næste bil. Det siger erfaringerne fra
-              andre klubber. Vi vil også forsøge at indregne leveringstid, som i øjeblikket er omkring et halvt år for
-              en elbil!</p>
-          </section>
         </article>
+
+        <!-- faq -->
         <article id="faq">
-          <h2>Spørgsmål og svar</h2>
           <section id="faq1">
+            <h2>Spørgsmål og svar</h2>
             <dl>
               <dt>Hvor kommer bilerne til at holde?</dt>
               <dd>Tæt på medlemmerne! I Nivå kommer første bil til at holde nær boligområderne Nivåhøj og G/F
@@ -266,15 +328,39 @@
                 Foreningens evt. overskud kommer alle medlemmerne til gavn, da det går til leasing af flere biler og
                 services til medlemmerne - efter generalforsamlingens beslutning</dd>
               <!-- <dt>Hvorfor ikke bare blive en gren af Nordsjællands Delebiler?</dt>
-                <dd>
-                  Hvis vi ikke kan blive mange medlemmer i år vil vi i stedet søge om at blive en del af Nordsjællands Delebiler
-                </dd> -->
+                  <dd>
+                    Hvis vi ikke kan blive mange medlemmer i år vil vi i stedet søge om at blive en del af Nordsjællands Delebiler
+                  </dd> -->
             </dl>
           </section>
         </article>
       </div>
+      <div class="col-md-2" style="background-color:#cbcbcb"></div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-md-6">
+        <!--links-->
+        <article id="links">
+          <section id="links1">
+            <h3>Links</h3>
+            <ul class="nav nav-pills flex-column">
+              <!-- <li class="nav-item">
+                  <a class="nav-link active" href="#">Active</a>
+                </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://drive.google.com/file/d/1mATu7Iu92pkCJZ9TBEcj5tP7FOhXPfgL/view?usp=sharing" target="_blank">Vedtægter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.nsjd.dk" target="_blank">Nordsjællands Delebiler</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Booking af bil (ikke muligt endnu)</a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </div>
   </div>
 
   <footer class="footer">
@@ -286,22 +372,10 @@
     </nav>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
 </body>
-
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("service-worker.js")
-        .then((registration) => {
-          console.log("Service Worker registered: ", registration);
-        })
-        .catch((registrationError) => {
-          console.error("Service Worker registration failed: ", registrationError);
-        });
-    });
-  }
-</script>
 
 </html>
